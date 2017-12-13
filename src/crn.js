@@ -1,22 +1,20 @@
 /*
   I know this isn't required or whatever but I want to give a little background on what I'm doing in this file. The objective of this is to create a function that takes a string input in the form "12345,67890" and converts those into course objects that can be use to create calendar events (templates in cal.js). This uses promises (I don't know how they work all I know is that they do). The timezone for events is Washington D.C.
 */
-let express = require('express')
-let app = express()
-let bodyParser = require('body-parser')
-let request = require('request')
+"use strict";
+const bodyParser = require('body-parser')
+const request = require('request')
 
 const weekday = [6, 0, 1, 2, 3, 4, 5]
 const weekname = ["Sunday", "Monday", "Tuesday","Wednesday","Thursday", "Friday", "Saturday"]
 const firstDays = {
-  0: new Date(2017, 09, 04),
-  1: new Date(2017, 09, 05),
-  2: new Date(2017, 08, 30),
-  3: new Date(2017, 08, 31),
-  4: new Date(2017, 09, 01)
+  0: new Date(2017, 9, 4),
+  1: new Date(2017, 9, 5),
+  2: new Date(2017, 8, 30),
+  3: new Date(2017, 8, 31),
+  4: new Date(2017, 9, 1)
 } //First days of the semester #NEEDS TO BE UPDATED EVERY SEMESTER
 
-app.use(bodyParser.json())
 
 let requestCRN = (string) => {
     return new Promise(resolve => request({

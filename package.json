@@ -1,24 +1,20 @@
 {
-  "name": "crn2calender",
-  "version": "1.0.0",
-  "description": "Takes CRN numbers and adds them as events to your calender",
-  "main": "index.js",
-  "scripts": {
-    "test": "test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oakypokey/crn2calender.git"
-  },
-  "author": "Calvin Dass & Derek Acosta",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/oakypokey/crn2calender/issues"
-  },
-  "homepage": "https://github.com/oakypokey/crn2calender#readme",
+  "name": "crn2calender2",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-md": "^1.2.9"
+    "react-scripts": "1.0.17",
+    "request": "^2.83.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
